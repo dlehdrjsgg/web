@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beef</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 50px;
+            text-align: center;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+        
+        .input-display {
+            font-size: 3em;
+            font-weight: bold;
+            letter-spacing: 5px;
+            padding: 20px;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .cursor {
+            display: inline-block;
+            width: 3px;
+            height: 1em;
+            background-color: #000000;
+            animation: blink 1s infinite;
+            margin-left: 5px;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        .status {
+            font-size: 1.2em;
+            margin-top: 20px;
+            color: #ffffff;
+        }
+
+        .social-buttons {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .social-buttons.show {
+            opacity: 1;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background-color: #f5f5f5;
+            color: #333;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            border: 1px solid #ddd;
+        }
+
+        .social-btn:hover {
+            background-color: #333;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .social-btn i {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="input-display" id="display">
+            <span id="text"></span>
+            <span class="cursor" id="cursor"></span>
+        </div>
+        
+        <div class="social-buttons">
+            <a href="mailto:me@beeef.kr" class="social-btn">
+                <i class="fas fa-envelope"></i>
+                me@beeef.kr
+            </a>
+            <a href="https://beeef.kr/blog" class="social-btn" target="_blank">
+                Blog
+            </a>
+            <a href="https://github.com/dlehdrjsgg" class="social-btn" target="_blank">
+                <i class="fab fa-github"></i>
+                Github
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const textElement = document.getElementById('text');
+        const cursorElement = document.getElementById('cursor');
+        const socialButtons = document.querySelector('.social-buttons');
+        
+        let currentText = '';
+        let currentIndex = 0;
+        
+        const sequence = ['B', ...Array(13).fill('e'), 'f'];
+        
+        function typeCharacter() {
+            if (currentIndex < sequence.length) {
+                currentText += sequence[currentIndex];
+                textElement.textContent = currentText;
+                
+                currentIndex++;
+                
+                setTimeout(typeCharacter, 500);
+            } else {
+                cursorElement.style.display = 'none';
+                
+                setTimeout(() => {
+                    socialButtons.classList.add('show');
+                }, 1000);
+            }
+        }
+        
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                typeCharacter();
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
