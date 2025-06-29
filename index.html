@@ -106,6 +106,38 @@
         .social-btn i {
             font-size: 1.2em;
         }
+
+        .social-btn img {
+            width: 1.2em;
+            height: 1.2em;
+            object-fit: contain;
+        }
+
+        .layer7-button {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .layer7-button.show {
+            opacity: 1;
+        }
+
+        .social-button2 {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .social-button2.show {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -130,6 +162,17 @@
                 Github
             </a>
         </div>
+        
+        <div class="social-button2">
+            <a href="https://layer7.kr" class="social-btn" target="_blank">
+                <img src="https://media.discordapp.net/attachments/1388202974852939897/1388768348749299804/Group.png?ex=68622ed0&is=6860dd50&hm=df3bc43f077f1847c30446a161241d22984cbc7ceff5cc945975a2567d732199&=&format=webp&quality=lossless&width=1024&height=1024" alt="Layer7 Icon">
+                Layer7
+            </a>
+            <a href="https://koreanbots.dev" class="social-btn" target="_blank">
+                <img src="https://media.discordapp.net/attachments/1388202974852939897/1388771397072846869/handiri.png?ex=686231a7&is=6860e027&hm=6d897f7695aca725276bba7a0364ba52e594838d095120409cda9d00bdc72bb1&=&format=webp&quality=lossless" alt="koreanbots Icon">
+                Koreanbots
+            </a>
+        </div>
     </div>
 
     <script>
@@ -137,6 +180,7 @@
         const cursorElement = document.getElementById('cursor');
         const socialButtons = document.querySelector('.social-buttons');
         const emojiDisplay = document.getElementById('emoji');
+        const socialButtons2 = document.querySelector('.social-button2');
         
         let currentText = '';
         let currentIndex = 0;
@@ -159,9 +203,10 @@
                     emojiDisplay.classList.add('show');
                 }, 500);
                 
-                // 이모지 표시 후 버튼들 표시
+                // 이모지 표시 후 모든 버튼들 동시에 표시
                 setTimeout(() => {
                     socialButtons.classList.add('show');
+                    socialButtons2.classList.add('show');
                 }, 1500);
             }
         }
