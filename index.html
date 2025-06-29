@@ -70,6 +70,18 @@
             opacity: 1;
         }
 
+        .emoji-display {
+            font-size: 4em;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .emoji-display.show {
+            opacity: 1;
+        }
+
         .social-btn {
             display: inline-flex;
             align-items: center;
@@ -103,6 +115,8 @@
             <span class="cursor" id="cursor"></span>
         </div>
         
+        <div class="emoji-display" id="emoji">🥩</div>
+        
         <div class="social-buttons">
             <a href="mailto:me@beeef.kr" class="social-btn">
                 <i class="fas fa-envelope"></i>
@@ -122,6 +136,7 @@
         const textElement = document.getElementById('text');
         const cursorElement = document.getElementById('cursor');
         const socialButtons = document.querySelector('.social-buttons');
+        const emojiDisplay = document.getElementById('emoji');
         
         let currentText = '';
         let currentIndex = 0;
@@ -139,9 +154,15 @@
             } else {
                 cursorElement.style.display = 'none';
                 
+                // 타이핑 완료 후 이모지 먼저 표시
+                setTimeout(() => {
+                    emojiDisplay.classList.add('show');
+                }, 500);
+                
+                // 이모지 표시 후 버튼들 표시
                 setTimeout(() => {
                     socialButtons.classList.add('show');
-                }, 1000);
+                }, 1500);
             }
         }
         
