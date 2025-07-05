@@ -1,0 +1,291 @@
+body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 50px;
+    text-align: center;
+    margin: 0;
+}
+
+/* Universal font family application */
+* {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.input-display {
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 5px;
+    padding: 20px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1em;
+    background-color: #000000;
+    animation: blink 1s infinite;
+    margin-left: 5px;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+.status {
+    font-size: 1.2em;
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+.social-buttons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.social-buttons.show {
+    opacity: 1;
+}
+
+.emoji-display {
+    font-size: 4em;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.emoji-display.show {
+    opacity: 1;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background-color: #f5f5f5;
+    color: #333;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border: 1px solid #ddd;
+}
+
+.social-btn:hover {
+    background-color: #333;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.social-btn i {
+    font-size: 1.2em;
+}
+
+.social-btn img {
+    width: 1.2em;
+    height: 1.2em;
+    object-fit: contain;
+}
+
+.layer7-button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.layer7-button.show {
+    opacity: 1;
+}
+
+.social-button2 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.social-button2.show {
+    opacity: 1;
+}
+
+/* Resume specific styles */
+.resume-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.resume-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #333;
+}
+
+.resume-header h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.resume-header .title {
+    font-size: 1.3em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.contact-info a:hover {
+    background-color: #f0f0f0;
+}
+
+.resume-section {
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    margin-top: 50px;
+}
+
+.resume-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.resume-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.experience-item, .education-item, .project-item {
+    margin-bottom: 25px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.experience-item::before, .education-item::before, .project-item::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #666;
+    font-weight: bold;
+}
+
+.item-header {
+    margin-bottom: 8px;
+}
+
+.item-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.item-company, .item-school {
+    color: #666;
+    font-style: italic;
+}
+
+.item-date {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.item-description {
+    margin-top: 10px;
+    color: #555;
+}
+
+.item-description ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.item-description li {
+    margin-bottom: 5px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background-color: #f0f0f0;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.back-to-home {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.back-to-home a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.back-to-home a:hover {
+    background-color: #555;
+}

@@ -4,141 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beef</title>
+    <link rel="icon" type="image/png" href="icon/beef.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/beef.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
-            background-color: #ffffff;
-            color: #000000;
-            padding: 50px;
-            text-align: center;
-            margin: 0;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 30px;
-        }
-        
-        .input-display {
-            font-size: 3em;
-            font-weight: bold;
-            letter-spacing: 5px;
-            padding: 20px;
-            min-height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        
-        .cursor {
-            display: inline-block;
-            width: 3px;
-            height: 1em;
-            background-color: #000000;
-            animation: blink 1s infinite;
-            margin-left: 5px;
-        }
-        
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
-        }
-        
-        .status {
-            font-size: 1.2em;
-            margin-top: 20px;
-            color: #ffffff;
-        }
-
-        .social-buttons {
-            margin-top: 50px;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-
-        .social-buttons.show {
-            opacity: 1;
-        }
-
-        .emoji-display {
-            font-size: 4em;
-            margin-top: 30px;
-            margin-bottom: 20px;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-
-        .emoji-display.show {
-            opacity: 1;
-        }
-
-        .social-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 20px;
-            background-color: #f5f5f5;
-            color: #333;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-            border: 1px solid #ddd;
-        }
-
-        .social-btn:hover {
-            background-color: #333;
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-
-        .social-btn i {
-            font-size: 1.2em;
-        }
-
-        .social-btn img {
-            width: 1.2em;
-            height: 1.2em;
-            object-fit: contain;
-        }
-
-        .layer7-button {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-
-        .layer7-button.show {
-            opacity: 1;
-        }
-
-        .social-button2 {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-
-        .social-button2.show {
-            opacity: 1;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -165,13 +34,161 @@
         
         <div class="social-button2">
             <a href="https://layer7.kr" class="social-btn" target="_blank">
-                <img src="https://media.discordapp.net/attachments/1388202974852939897/1388768348749299804/Group.png?ex=68622ed0&is=6860dd50&hm=df3bc43f077f1847c30446a161241d22984cbc7ceff5cc945975a2567d732199&=&format=webp&quality=lossless&width=1024&height=1024" alt="Layer7 Icon">
+                <img src="icon/Layer7.png">
                 Layer7
             </a>
             <a href="https://koreanbots.dev" class="social-btn" target="_blank">
-                <img src="https://media.discordapp.net/attachments/1388202974852939897/1388771397072846869/handiri.png?ex=686231a7&is=6860e027&hm=6d897f7695aca725276bba7a0364ba52e594838d095120409cda9d00bdc72bb1&=&format=webp&quality=lossless" alt="koreanbots Icon">
+                <img src="icon/koreanbots.png">
                 Koreanbots
             </a>
+        </div>
+        
+        <!-- Resume Section -->
+        <div class="resume-section" id="resume">
+            <div class="resume-container">
+                <div class="resume-header">
+                    <h1>Resume</h1>
+                    <div class="title">Software Developer & System Administrator</div>
+                </div>
+
+                <div class="resume-content">
+                    <div class="section">
+                        <h2>About Me</h2>
+                        <p>Passionate software developer with expertise in web development, system administration, and bot development. Experienced in building scalable applications and managing infrastructure. Active contributor to open-source projects and the Korean developer community.</p>
+                    </div>
+
+                    <div class="section">
+                        <h2>Skills</h2>
+                        <div class="skills-list">
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Vue.js</span>
+                            <span class="skill-tag">Express.js</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Discord.js</span>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Experience</h2>
+                        
+                        <div class="experience-item">
+                            <div class="item-header">
+                                <div class="item-title">Co-Founder & Lead Developer</div>
+                                <div class="item-company">Layer7</div>
+                                <div class="item-date">2022 - Present</div>
+                            </div>
+                            <div class="item-description">
+                                <ul>
+                                    <li>Co-founded and lead development of Layer7, a comprehensive Discord bot platform</li>
+                                    <li>Architected and implemented scalable bot infrastructure serving thousands of Discord servers</li>
+                                    <li>Developed advanced features including moderation tools, analytics, and custom integrations</li>
+                                    <li>Managed team of developers and coordinated product development cycles</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="item-header">
+                                <div class="item-title">Active Contributor</div>
+                                <div class="item-company">KoreanBots</div>
+                                <div class="item-date">2021 - Present</div>
+                            </div>
+                            <div class="item-description">
+                                <ul>
+                                    <li>Contributed to the Korean Discord bot community platform</li>
+                                    <li>Developed and maintained bot listings and review systems</li>
+                                    <li>Participated in community events and technical discussions</li>
+                                    <li>Helped onboard new developers to the platform</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="item-header">
+                                <div class="item-title">Freelance Developer</div>
+                                <div class="item-company">Various Clients</div>
+                                <div class="item-date">2020 - Present</div>
+                            </div>
+                            <div class="item-description">
+                                <ul>
+                                    <li>Developed custom web applications and Discord bots for various clients</li>
+                                    <li>Implemented automation solutions and system integrations</li>
+                                    <li>Provided technical consulting and system administration services</li>
+                                    <li>Maintained long-term client relationships with ongoing support</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Projects</h2>
+                        
+                        <div class="project-item">
+                            <div class="item-header">
+                                <div class="item-title">Personal Blog Platform</div>
+                                <div class="item-date">2023 - Present</div>
+                            </div>
+                            <div class="item-description">
+                                <ul>
+                                    <li>Built and maintain a personal blog at beeef.kr/blog</li>
+                                    <li>Implemented custom content management system</li>
+                                    <li>Features include markdown support, SEO optimization, and responsive design</li>
+                                    <li>Regularly publish technical articles and tutorials</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <div class="item-header">
+                                <div class="item-title">Discord Bot Ecosystem</div>
+                                <div class="item-date">2021 - Present</div>
+                            </div>
+                            <div class="item-description">
+                                <ul>
+                                    <li>Developed multiple Discord bots with various functionalities</li>
+                                    <li>Implemented features like music playback, moderation, and custom commands</li>
+                                    <li>Used Discord.js and various APIs for enhanced functionality</li>
+                                    <li>Deployed and maintained bots using cloud infrastructure</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Education</h2>
+                        
+                        <div class="education-item">
+                            <div class="item-header">
+                                <div class="item-title">Self-Taught Developer</div>
+                                <div class="item-school">Online Resources & Community Learning</div>
+                                <div class="item-date">2019 - Present</div>
+                            </div>
+                            <div class="item-description">
+                                <ul>
+                                    <li>Continuously learning new technologies through online courses and documentation</li>
+                                    <li>Active participation in developer communities and forums</li>
+                                    <li>Hands-on experience through personal projects and open-source contributions</li>
+                                    <li>Regular attendance at tech meetups and conferences</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Interests</h2>
+                        <p>Open Source Development, System Architecture, DevOps, Community Building, Technical Writing, Gaming, Music Production</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -181,11 +198,12 @@
         const socialButtons = document.querySelector('.social-buttons');
         const emojiDisplay = document.getElementById('emoji');
         const socialButtons2 = document.querySelector('.social-button2');
+        const resumeSection = document.getElementById('resume');
         
         let currentText = '';
         let currentIndex = 0;
         
-        const sequence = ['B', ...Array(13).fill('e'), 'f'];
+        const sequence = ['B', ...Array(4).fill('e'), 'f'];
         
         function typeCharacter() {
             if (currentIndex < sequence.length) {
@@ -208,6 +226,11 @@
                     socialButtons.classList.add('show');
                     socialButtons2.classList.add('show');
                 }, 1500);
+                
+                // 버튼들 표시 후 resume 섹션 표시
+                setTimeout(() => {
+                    resumeSection.classList.add('show');
+                }, 2500);
             }
         }
         
